@@ -1,0 +1,42 @@
+Requirements:
+  ☐ Use redux
+  Use the following hooks:
+    ☐ useState
+    ☐ useEffect
+    ☐ useRef
+  ☐ Unit testing using Jest & Enzyme, min 50% coverage
+  Readme:
+    ☐ Test results
+    ☐ Info related to project
+  
+
+Slicing:
+  Main Layout:
+    Header:
+      ☐ Navigation
+      ☐ Categories: (Image & category name)
+    ☐ Footer
+
+  Homepage:
+    ☐ Pre-opened nav & categories menu
+    ☐ List of vehicles
+  Search Page:
+    ☐ At first, display a search text box
+    ☐ As the user types, show the searched vehicle: image & description
+  Detils Page:
+    ☐ Image
+    ☐ Description
+    ☐ Share & Like button
+    ☐ Book button
+  MyBook Page:
+    ☐ List of booked vehicles
+    ☐ Showing image, vehicle name, price, & total price
+    ☐ When pressed, navigates to details page
+  Wishlist Page:
+    ☐ List of liked vehicles
+    ☐ Display same as MyBook Page
+
+
+Additional:
+  ☐ Animation
+  ☐ Responsive design

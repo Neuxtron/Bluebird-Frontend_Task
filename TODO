@@ -1,8 +1,8 @@
 Requirements:
   ☐ Use redux
   Use the following hooks:
-    ☐ useState
-    ☐ useEffect
+    ✔ useState @done(24-01-06 21:43)
+    ✔ useEffect @done(24-01-06 21:43)
     ☐ useRef
   ☐ Unit testing using Jest & Enzyme, min 50% coverage
   Readme:
@@ -29,13 +29,13 @@ Slicing:
     ✔ Share & Like button @done(24-01-06 18:28)
     ✔ Book button @done(24-01-06 18:28)
   MyBook Page:
-    ☐ List of booked vehicles
-    ☐ Showing image, vehicle name, price
-    ☐ Display total price
+    ✔ List of booked vehicles @done(24-01-06 21:42)
+    ✔ Showing image, vehicle name, price @done(24-01-06 21:42)
+    ✔ Display total price @done(24-01-06 21:42)
     ☐ When pressed, navigates to details page
   Wishlist Page:
-    ☐ List of liked vehicles
-    ☐ Display same as MyBook Page
+    ✔ List of liked vehicles @done(24-01-06 21:42)
+    ✔ Display same as MyBook Page @done(24-01-06 21:42)
 
 
 Functionality:

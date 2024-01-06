@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <>
       <div className={styles.vehicleList}>
-        <h1>Experience the drive</h1>
+        <h1>Experience the ride</h1>
         <p>from different seats.</p>
 
         <div>

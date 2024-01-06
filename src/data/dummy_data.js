@@ -1,3 +1,30 @@
+export const dummyCategories = [
+  {
+    id: 1,
+    name: "Taxi",
+    imageURL:
+      "https: //www.bluebirdgroup.com/img/armadaservicetype/626901eccdb74.png?w=127",
+  },
+  {
+    id: 2,
+    name: "Car Rental",
+    imageURL:
+      "https://www.bluebirdgroup.com/img/armadaservicetype/626902e92204c.png?w=127",
+  },
+  {
+    id: 3,
+    name: "Shuttle Service",
+    imageURL:
+      "https://www.bluebirdgroup.com/img/armadaservicetype/62baa4896b805.png?w=127",
+  },
+  {
+    id: 4,
+    name: "Bus",
+    imageURL:
+      "https://www.bluebirdgroup.com/img/armadaservicetype/626901a4b692d.png?w=127",
+  },
+]
+
 export const dummyVehicles = [
   {
     id: 1,

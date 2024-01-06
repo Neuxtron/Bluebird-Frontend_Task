@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 import MenuBar from "./MenuBar"
 
 function MainLayout({ children }) {
@@ -5,6 +6,7 @@ function MainLayout({ children }) {
     <>
       <MenuBar />
       {children}
+      <Footer />
     </>
   )
 }

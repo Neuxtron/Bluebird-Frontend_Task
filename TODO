@@ -18,8 +18,8 @@ Slicing:
     ☐ Footer
 
   Homepage:
-    ☐ Pre-opened nav & categories menu
-    ☐ List of vehicles: like button
+    ✘ Pre-opened nav & categories menu @cancelled(24-01-06 12:50)
+    ✔ List of vehicles: like button @done(24-01-06 12:50)
   Search Page:
     ☐ At first, display a search text box
     ☐ As the user types, show the searched vehicle: image & description

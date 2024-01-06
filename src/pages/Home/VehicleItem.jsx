@@ -1,15 +1,13 @@
-import { AiOutlineLike, AiFillLike } from "react-icons/ai"
+import { FaRegHeart, FaHeart } from "react-icons/fa"
 import styles from "./styles.module.scss"
 
 function VehicleItem({ imageUrl, name }) {
   return (
     <li>
       <img src={imageUrl} alt={name} />
-      <div>
-        <h1>{name}</h1>
-      </div>
-      <AiOutlineLike className={styles.outlinedLike} />
-      {/* <AiFillLike className={styles.filledLike} /> */}
+        <p>{name}</p>
+      <FaRegHeart className={styles.outlinedLike} />
+      {/* <FaHeart className={styles.filledLike} /> */}
     </li>
   )
 }

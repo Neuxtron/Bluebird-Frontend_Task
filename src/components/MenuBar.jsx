@@ -5,6 +5,7 @@ function MenuBar() {
   return (
     <div className={styles.menuBar}>
       <Header />
+      {/* TODO: add categories list */}
     </div>
   )
 }

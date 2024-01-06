@@ -8,39 +8,3 @@
     display: flex;
   }
 }
-
-.header {
-  top: 0;
-  height: 72px;
-  padding: 0 20px;
-  align-items: center;
-
-  h1 {
-    color: white;
-    font-size: 1.8rem;
-  }
-  ul {
-    margin-left: 50px;
-    list-style: none;
-    display: flex;
-    height: 100%;
-  }
-}
-
-.navItem {
-  height: 100%;
-
-  a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
-    height: 100%;
-    padding: 0 30px;
-    
-    &:hover {
-      background-color: #00000022;
-    }
-  }
-}

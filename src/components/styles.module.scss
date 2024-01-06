@@ -11,6 +11,13 @@
   }
 }
 
+.content {
+  min-height: 100vh;
+  height: auto;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
 .footer {
   display: flex;
   padding: 40px 50px;

@@ -1,11 +1,14 @@
 import Footer from "./Footer"
 import MenuBar from "./MenuBar"
+import styles from "./styles.module.scss"
 
 function MainLayout({ children }) {
   return (
     <>
       <MenuBar />
-      {children}
+      <div className={styles.content}>
+        {children}
+      </div>
       <Footer />
     </>
   )

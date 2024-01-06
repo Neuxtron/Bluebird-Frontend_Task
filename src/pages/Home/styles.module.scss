@@ -1,13 +1,6 @@
 @use "../../assets/colors" as colors;
 @import "../../assets/fonts";
 
-.homePage {
-  min-height: 100vh;
-  height: auto;
-  padding: 50px 0;
-  box-sizing: border-box;
-}
-
 .vehicleList {
   display: flex;
   flex-direction: column;

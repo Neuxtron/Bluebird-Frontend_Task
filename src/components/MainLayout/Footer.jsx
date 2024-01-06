@@ -1,6 +1,6 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 import styles from "./styles.module.scss"
-import { dummyCategories } from "../data/dummy_data"
+import { dummyCategories } from "../../data/dummy_data"
 
 function Footer() {
   return (

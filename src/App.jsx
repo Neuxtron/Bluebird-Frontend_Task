@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react"
 import "./assets/global.scss"
-import MainLayout from "./components/MainLayout"
+import MainLayout from "./components/MainLayout/MainLayout"
 import { Outlet, Route, Routes } from "react-router"
 
 const HomePage = lazy(() => import("./pages/Home"))

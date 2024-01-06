@@ -1,3 +1,9 @@
+export const dummyWishlist = [
+  "Electric",
+  "Bravo Premium",
+  "Alpha Premium",
+]
+
 export const dummyCategories = [
   {
     id: 1,

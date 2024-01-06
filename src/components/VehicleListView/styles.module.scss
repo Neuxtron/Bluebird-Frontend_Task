@@ -1,0 +1,59 @@
+@use "../../assets/colors" as colors;
+@import "../../assets/fonts";
+
+.listview {
+  margin: 0 200px;
+
+  & > h1 {
+    font-family: 'Arial Rounded';
+    margin-bottom: 50px;
+    color: colors.$primary;
+  }
+}
+
+.listItem {
+  position: relative;
+  padding: 0 20px;
+  align-items: center;
+  height: 170px;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: lightsteelblue;
+    
+    & > p {
+      visibility: visible;
+    }
+  }
+
+  & > div {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 20px 10px;
+  }
+  & > p {
+    visibility: hidden;
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 20px;
+    }
+  }
+}
+
+.total {
+  margin-top: 50px;
+
+  p {
+    font-size: 2rem;
+    font-family: 'Arial Rounded';
+    text-align: right;
+    
+    &:first-child {
+      font-size: 1.3rem;
+    }
+  }
+}

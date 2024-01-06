@@ -7,7 +7,7 @@ function HomePage() {
   const randVehicles = getRandomVehicles()
 
   return (
-    <div className={styles.homePage}>
+    <>
       <div className={styles.vehicleList}>
         <h1>Experience the drive</h1>
         <p>from different seats.</p>
@@ -32,7 +32,7 @@ function HomePage() {
 
       {/* IDEA: add more sections */}
       {/* IDEA: other sections with primary background & white foreground color */}
-    </div>
+    </>
   )
 }
 

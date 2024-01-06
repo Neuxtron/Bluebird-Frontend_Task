@@ -1,0 +1,22 @@
+@use "../assets/colors" as colors;
+
+.vehicleDescription{
+  h1 {
+    margin-bottom: 10px;
+  }
+  img {
+    width: 300px;
+    height: 200px;
+    margin-right: 30px;
+    object-fit: contain;
+  }
+  ul {
+    width: 700px;
+    list-style: none;
+    
+    li svg {
+      margin-right: 10px;
+      color: colors.$primary;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@use "../../assets/colors" as colors;
+@import "../../assets/fonts";
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.actions > div {  
+  &:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+
+    button {
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: colors.$primary;
+      }
+      svg {
+        font-size: 1.4rem;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &:last-child {
+    width: 700px;
+    margin-left: 30px;
+    
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      font-family: 'Arial Rounded';
+    }
+    button {
+      width: 100%;
+      background-color: white;
+      border: 2px solid colors.$primary;
+      border-radius: 100px;
+      font-weight: bold;
+      color: colors.$primary;
+
+      &:hover {
+        background-color: colors.$primary;
+        color: white;
+      }
+    }
+  }
+
+  button {
+    width: 100px;
+    height: fit-content;
+    padding: 5px 0;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.unlikeBtn {
+  color: colors.$primary;
+
+  &:hover {
+    color: gray !important;
+  }
+}

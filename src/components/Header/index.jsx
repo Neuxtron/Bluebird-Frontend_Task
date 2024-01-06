@@ -5,6 +5,7 @@ import Searchbox from "./Searchbox"
 function Header() {
   return (
     <div className={styles.header}>
+      <img src="/logo.png" alt="Blublu Logo" />
       <h1>Blublu Bookings</h1>
       <Navbar />
       <Searchbox />

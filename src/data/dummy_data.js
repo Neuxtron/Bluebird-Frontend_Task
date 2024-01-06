@@ -3,6 +3,11 @@ export const dummyWishlist = [
   "Bravo Premium",
   "Alpha Premium",
 ]
+export const dummyBookings = [
+  "Regular",
+  "Silver",
+  "Marcedes E200",
+]
 
 export const dummyCategories = [
   {

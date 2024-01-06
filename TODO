@@ -24,10 +24,10 @@ Slicing:
     ☐ At first, display a search text box
     ☐ As the user types, show the searched vehicle: image & description
   Detils Page:
-    ☐ Image
-    ☐ Description
-    ☐ Share & Like button
-    ☐ Book button
+    ✔ Image @done(24-01-06 18:28)
+    ✔ Description @done(24-01-06 18:28)
+    ✔ Share & Like button @done(24-01-06 18:28)
+    ✔ Book button @done(24-01-06 18:28)
   MyBook Page:
     ☐ List of booked vehicles
     ☐ Showing image, vehicle name, price

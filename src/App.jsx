@@ -1,9 +1,7 @@
-import { useState } from 'react'
+import "./assets/global.scss"
 import HomePage from './pages/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <HomePage />

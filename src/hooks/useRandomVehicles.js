@@ -3,6 +3,7 @@ import { useRef } from "react"
 function useRandomVehicles(vehiclesList, randCount = 5) {
   const randomVehicles = useRef([])
   if (vehiclesList.length === 0) return []
+  if (randomVehicles.current.length !== 0) return randomVehicles.current
   
   for (let i = 0; i < randCount; i++) {
     const randIndex = Math.floor(Math.random() * vehiclesList.length)

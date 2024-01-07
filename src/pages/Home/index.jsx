@@ -8,6 +8,7 @@ import getAllVehicles from "../../utils/getAllVehicles"
 import useFetchVehicleByCategory from "../../hooks/useFetchVehicleByCategory"
 import { useSelector } from "react-redux"
 import LoadingScreen from "../../components/Loading"
+import { useRef } from "react"
 
 function HomePage() {
   const [vehiclesByCategory, isLoading] = useFetchVehicleByCategory()
@@ -15,8 +16,18 @@ function HomePage() {
   const randVehicles = useRandomVehicles(allVehicles)
   const categories = useSelector((state) => state.vehicles.categories)
   const { categoryId } = useParams()
+  const randomRef = useRef(null)
 
-  if (isLoading) return <LoadingScreen />
+  const randScrollRight = () => {
+    const scrollPos = randomRef.current.scrollLeft
+    randomRef.current.scroll(scrollPos + 280, 0)
+  }
+  const randScrollLeft = () => {
+    const scrollPos = randomRef.current.scrollLeft
+    randomRef.current.scroll(scrollPos - 280, 0)
+  }
+
+  if (isLoading && allVehicles.length === 0) return <LoadingScreen />
 
   return (
     <>
@@ -25,8 +36,8 @@ function HomePage() {
         <p>from different seats.</p>
 
         <div>
-          <IoIosArrowBack />
-          <ul>
+          <IoIosArrowBack onClick={randScrollLeft} />
+          <ul ref={randomRef}>
             {randVehicles.map((vehicle) => {
               const key = crypto.randomUUID()
               return (
@@ -38,7 +49,7 @@ function HomePage() {
               )
             })}
           </ul>
-          <IoIosArrowForward />
+          <IoIosArrowForward onClick={randScrollRight} />
         </div>
       </div>}
 

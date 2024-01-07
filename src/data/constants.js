@@ -1,0 +1,1 @@
+export const baseUrl = "https://private-f2fbfb-ridecar2.apiary-mock.com"

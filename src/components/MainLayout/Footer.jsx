@@ -1,9 +1,11 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 import styles from "./styles.module.scss"
-import { dummyCategories } from "../../data/dummy_data"
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 function Footer() {
+  const categories = useSelector((state) => state.vehicles.categories)
+  
   return (
     <div className={styles.footer}>
       <div className={styles.contact}>
@@ -19,7 +21,7 @@ function Footer() {
       <div>
         <h1>Services</h1>
         <ul>
-          {dummyCategories.map((category) => {
+          {categories.map((category) => {
             const key = crypto.randomUUID()
             return <LinkItem key={key} text={category.name} to={`/${category.id}`} />
           })}

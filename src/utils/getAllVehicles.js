@@ -1,11 +1,11 @@
-import { dummyVehicles } from "../data/dummy_data";
+import { useSelector } from "react-redux";
 
 function getAllVehicles() {
   const allVehicles = []
+  const vehiclesByCategory = useSelector((state) => state.vehicles.vehiclesByCategory)
 
-  // TODO: fetch from api
-  dummyVehicles.forEach((category) => {
-    category.carType.forEach(vehicle => allVehicles.push(vehicle))
+  vehiclesByCategory.forEach((category) => {
+    category.car_type.forEach(vehicle => allVehicles.push(vehicle))
   })
   return allVehicles;
 }

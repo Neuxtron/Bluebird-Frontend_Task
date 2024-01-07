@@ -1,15 +1,18 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
-import getRandomVehicles from "../../utils/getRandomVehicles"
+import useRandomVehicles from "../../hooks/useRandomVehicles"
 import VehicleItem from "./VehicleItem"
 import styles from "./styles.module.scss"
-import { dummyCategories, dummyVehicles } from "../../data/dummy_data"
 import HomeCategoryItem from "./HomeCategoryItem"
-import { useNavigate, useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import getAllVehicles from "../../utils/getAllVehicles"
+import useFetchVehicleByCategory from "../../hooks/useFetchVehicleByCategory"
+import { useSelector } from "react-redux"
 
 function HomePage() {
-  const randVehicles = getRandomVehicles()
-  const categories = useGetCategories()
+  const vehiclesByCategory = useFetchVehicleByCategory()
+  const allVehicles = getAllVehicles()
+  const randVehicles = useRandomVehicles(allVehicles)
+  const categories = useSelector((state) => state.vehicles.categories)
   const { categoryId } = useParams()
 
   return (
@@ -36,9 +39,9 @@ function HomePage() {
         </div>
       </div>}
 
-      {categories.map((category) => {
-        const vehicle = dummyVehicles.find((vehicleItem) => {
-          return vehicleItem.categoryId == category.id
+      {vehiclesByCategory.length === 0 ? null : categories.map((category) => {
+        const vehicle = vehiclesByCategory.find((vehicleItem) => {
+          return vehicleItem.category_id == category.id
         })
         const key = crypto.randomUUID()
         if (categoryId && categoryId != category.id) return null
@@ -52,21 +55,6 @@ function HomePage() {
       })}
     </>
   )
-}
-
-function useGetCategories() {
-  const [categories, setCategories] = useState([])
-
-  async function fetchCategories() {
-    // TODO: fetch from API
-    setCategories(dummyCategories)
-  }
-
-  useEffect(() => {
-    fetchCategories()
-  }, [])
-
-  return categories
 }
 
 export default HomePage

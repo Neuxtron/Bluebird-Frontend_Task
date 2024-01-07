@@ -53,7 +53,6 @@ function useGetVehicle(id) {
   useEffect(fetchVehicle, [])
 
   function fetchVehicle() {
-    // TODO: get vehicle from api call
     const singleVehicle = getAllVehicles().find((vehicleItem) => {
       return vehicleItem.vehicle == id
     })

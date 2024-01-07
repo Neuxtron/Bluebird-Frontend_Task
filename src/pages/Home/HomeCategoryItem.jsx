@@ -9,7 +9,7 @@ function HomeCategoryItem({ categoryName, vehicle }) {
         <div>
           <IoIosArrowBack />
           <ul>
-            {vehicle.carType.map((vehicle) => {
+            {vehicle.car_type.map((vehicle) => {
               const key = crypto.randomUUID()
               return (
                 <VehicleItem

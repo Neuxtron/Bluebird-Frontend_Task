@@ -1,9 +1,10 @@
-import { useEffect } from "react"
 import VehicleListView from "../../components/VehicleListView"
-import getWishlistVehicles from "../../utils/getWishlistVehicles"
+import useWishlistVehicles from "../../hooks/useWishlistVehicles"
+import getAllVehicles from "../../utils/getAllVehicles"
 
 function WishlistPage() {
-  const wishlistVehicles = getWishlistVehicles()
+  const vehiclesList = getAllVehicles()
+  const wishlistVehicles = useWishlistVehicles(vehiclesList)
 
   return <VehicleListView vehicleList={wishlistVehicles} pageTitle="Wishlist" />
 }

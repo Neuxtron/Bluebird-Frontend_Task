@@ -39,8 +39,8 @@ export const dummyCategories = [
 export const dummyVehicles = [
   {
     id: 1,
-    categoryId: 1,
-    carType: [
+    category_id: 1,
+    car_type: [
       {
         vehicle: "Regular",
         imageURL:
@@ -66,8 +66,8 @@ export const dummyVehicles = [
   },
   {
     id: 2,
-    categoryId: 3,
-    carType: [
+    category_id: 3,
+    car_type: [
       {
         vehicle: "Hiace Premio",
         imageURL:
@@ -107,8 +107,8 @@ export const dummyVehicles = [
   },
   {
     id: 3,
-    categoryId: 4,
-    carType: [
+    category_id: 4,
+    car_type: [
       {
         vehicle: "Alpha Premium",
         imageURL:
@@ -149,8 +149,8 @@ export const dummyVehicles = [
   },
   {
     id: 4,
-    categoryId: 2,
-    carType: [
+    category_id: 2,
+    car_type: [
       {
         vehicle: "Innova Type G",
         imageURL:

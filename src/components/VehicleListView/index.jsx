@@ -7,7 +7,7 @@ function VehicleListView({ vehicleList, pageTitle = "" }) {
     const price = parseInt(priceStr)
     return price
   })
-  const totalPrice = priceList.reduce((total, price) => {
+  const totalPrice = priceList.length === 0 ? 0 : priceList.reduce((total, price) => {
     return total + price
   })
   const nf = new Intl.NumberFormat('id-ID')
@@ -20,6 +20,7 @@ function VehicleListView({ vehicleList, pageTitle = "" }) {
         const key = crypto.randomUUID()
         return <VehicleListItem key={key} vehicle={vehicle} />
       })}
+      {priceList.length === 0 ? <p>The list is empty</p> : null}
       <div className={styles.total}>
         <p>Grand Total</p>
         <p>{totalPriceStr}</p>

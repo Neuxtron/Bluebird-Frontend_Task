@@ -2,9 +2,13 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 import getRandomVehicles from "../../utils/getRandomVehicles"
 import VehicleItem from "./VehicleItem"
 import styles from "./styles.module.scss"
+import getAllVehicles from "../../utils/getAllVehicles"
+import { dummyCategories, dummyVehicles } from "../../data/dummy_data"
+import HomeCategoryItem from "./HomeCategoryItem"
 
 function HomePage() {
   const randVehicles = getRandomVehicles()
+  const allVehicles = getAllVehicles()
 
   return (
     <>
@@ -30,8 +34,19 @@ function HomePage() {
         </div>
       </div>
 
-      {/* IDEA: add more sections */}
-      {/* IDEA: other sections with primary background & white foreground color */}
+      {dummyCategories.map((category) => {
+        const vehicle = dummyVehicles.find(vehicleItem => {
+          return vehicleItem.categoryId == category.id
+        })
+        const key = crypto.randomUUID()
+        return (
+          <HomeCategoryItem
+            key={key}
+            categoryName={category.name}
+            vehicleList={vehicle.carType}
+          />
+        )
+      })}
     </>
   )
 }

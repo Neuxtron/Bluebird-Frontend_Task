@@ -1,7 +1,7 @@
 import VehicleListItem from "./VehicleListItem"
 import styles from "./styles.module.scss"
 
-function VehicleListView({ vehicleList, pageTitle = "" }) {
+function VehicleListView({ vehicleList, pageTitle = "", showTotal = true }) {
   const priceList = vehicleList.map(vehicle => {
     const priceStr = vehicle.price.replace(/[^0-9]/g, "")
     const price = parseInt(priceStr)
@@ -21,10 +21,10 @@ function VehicleListView({ vehicleList, pageTitle = "" }) {
         return <VehicleListItem key={key} vehicle={vehicle} />
       })}
       {priceList.length === 0 ? <p>The list is empty</p> : null}
-      <div className={styles.total}>
+      {showTotal ? <div className={styles.total}>
         <p>Grand Total</p>
         <p>{totalPriceStr}</p>
-      </div>
+      </div> : null}
     </div>
   )
 }

@@ -21,8 +21,7 @@ function Footer() {
         <ul>
           {dummyCategories.map((category) => {
             const key = crypto.randomUUID()
-            // TODO: navigate to corresponding page
-            return <LinkItem key={key} text={category.name} to="#" />
+            return <LinkItem key={key} text={category.name} to={`/${category.id}`} />
           })}
         </ul>
       </div>
@@ -38,9 +37,13 @@ function Footer() {
 }
 
 function LinkItem({ text, to }) {
+  const scrollToTop = () => {
+    scrollTo(0, 0)
+  }
+  
   return (
     <li>
-      <Link to={to}>{text}</Link>
+      <Link to={to} onClick={scrollToTop}>{text}</Link>
     </li>
   )
 }

@@ -5,8 +5,6 @@ import getWishlistVehicles from "../../utils/getWishlistVehicles"
 function WishlistPage() {
   const wishlistVehicles = getWishlistVehicles()
 
-  useEffect(() => scrollTo(0, 0), [])
-
   return <VehicleListView vehicleList={wishlistVehicles} pageTitle="Wishlist" />
 }
 

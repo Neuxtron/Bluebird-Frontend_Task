@@ -19,7 +19,9 @@ export const vehiclesSlice = createSlice({
       }
     },
     bookVehicle: (state, action) => {
-      // TODO: add vehicle id to bookedIds
+      if (!state.bookedIds.includes(action.payload)) {
+        state.bookedIds.push(action.payload)
+      }
     },
     setVehicles: (state, action) => {
       state.vehiclesByCategory = action.payload

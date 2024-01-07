@@ -6,7 +6,7 @@ import styles from "./styles.module.scss"
 import { useEffect, useState } from "react"
 import VehicleDescription from "../../components/VehicleDescription"
 import { useDispatch, useSelector } from "react-redux"
-import { toggleLikeVehicle } from "../../state/features/vehicles"
+import { bookVehicle, toggleLikeVehicle } from "../../state/features/vehicles"
 
 function DetailsPage() {
   const { id } = useParams()
@@ -14,12 +14,18 @@ function DetailsPage() {
   const likedIds = useSelector((state) => state.vehicles.likedIds)
   const dispatch = useDispatch()
   const isLiked = vehicle ? likedIds.includes(vehicle.vehicle) : false
+  // TODO: isBooked
 
   useEffect(() => scrollTo(0, 0), [])
 
   const toggleLike = () => {
     console.log(vehicle);
     dispatch(toggleLikeVehicle(vehicle.vehicle))
+  }
+
+  const bookSelectedVehicle = () => {
+    // TODO: notify user
+    dispatch(bookVehicle(vehicle.vehicle))
   }
 
   // OPTIMIZE: return loading animation
@@ -53,7 +59,7 @@ function DetailsPage() {
         </div>
         <div>
           <p>{vehicle.price}</p>
-          <button>Book</button>
+          <button onClick={bookSelectedVehicle}>Book</button>
         </div>
       </div>
     </div>

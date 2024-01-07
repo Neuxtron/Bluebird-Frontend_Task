@@ -1,6 +1,7 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 import styles from "./styles.module.scss"
 import { dummyCategories } from "../../data/dummy_data"
+import { Link } from "react-router-dom"
 
 function Footer() {
   return (
@@ -20,16 +21,15 @@ function Footer() {
         <ul>
           {dummyCategories.map((category) => {
             const key = crypto.randomUUID()
-            // TODO: navigate to corresponding page
-            return <LinkItem key={key} text={category.name} to="#" />
+            return <LinkItem key={key} text={category.name} to={`/${category.id}`} />
           })}
         </ul>
       </div>
       <div>
         <h1>Navigation</h1>
         <ul>
-          <LinkItem text="Wishlist" to="#" />
-          <LinkItem text="My Bookings" to="#" />
+          <LinkItem text="Wishlist" to="/wishlist" />
+          <LinkItem text="My Bookings" to="my-bookings" />
         </ul>
       </div>
     </div>
@@ -37,9 +37,13 @@ function Footer() {
 }
 
 function LinkItem({ text, to }) {
+  const scrollToTop = () => {
+    scrollTo(0, 0)
+  }
+  
   return (
     <li>
-      <a href={to}>{text}</a>
+      <Link to={to} onClick={scrollToTop}>{text}</Link>
     </li>
   )
 }

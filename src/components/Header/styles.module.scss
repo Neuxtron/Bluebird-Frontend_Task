@@ -10,6 +10,11 @@
   background-color: colors.$primary;
   z-index: 1;
 
+  a {
+    height: 100%;
+    align-items: center;
+    text-decoration: none;
+  }
   img {
     height: 100%;
     box-sizing: border-box;
@@ -31,7 +36,8 @@
 
 .navItem {
   height: 100%;
-
+  transition: background-color .2s;
+  
   & > * {
     display: flex;
     align-items: center;
@@ -41,11 +47,15 @@
     height: 100%;
     padding: 0 30px;
     cursor: pointer;
+    transition: background-color .2s;
     
     &:hover {
-      background-color: #FFFFFF17;
+      background-color: mix(white, colors.$primary, 10%);
     }
   }
+}
+.selected {
+  background-color: mix(black, colors.$primary, 12%);
 }
 
 .search {

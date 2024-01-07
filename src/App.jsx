@@ -13,6 +13,7 @@ function App() {
     <Routes>
       <Route path="/" element={<NavWrapper />}>
         <Route index element={<HomePage />} />
+        <Route path="/:categoryId" element={<HomePage />} />
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/my-bookings" element={<MyBookingsPage />} />

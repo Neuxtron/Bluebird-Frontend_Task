@@ -49,6 +49,7 @@
   padding: 10px;
   border-right: 1px solid colors.$primaryOverlay;
   border-left: 1px solid colors.$primaryOverlay;
+  user-select: none;
 
   img {
     height: 100px;
@@ -58,7 +59,7 @@
     font-size: 1.2rem;
     color: gray;
   }
-  & > div {
+  & > a {
     position: absolute;
     width: 100%;
     height: 100%;

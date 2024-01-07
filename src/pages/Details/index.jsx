@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import VehicleDescription from "../../components/VehicleDescription"
 import { useDispatch, useSelector } from "react-redux"
 import { bookVehicle, toggleLikeVehicle } from "../../state/features/vehicles"
+import LoadingScreen from "../../components/Loading"
 
 function DetailsPage() {
   const { id } = useParams()
@@ -35,7 +36,7 @@ function DetailsPage() {
   }
 
   // OPTIMIZE: return loading animation
-  if (!vehicle) return null
+  if (!vehicle) return <LoadingScreen />
 
   return (
     <div className={styles.details}>

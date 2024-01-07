@@ -7,13 +7,16 @@ import { useParams } from "react-router-dom"
 import getAllVehicles from "../../utils/getAllVehicles"
 import useFetchVehicleByCategory from "../../hooks/useFetchVehicleByCategory"
 import { useSelector } from "react-redux"
+import LoadingScreen from "../../components/Loading"
 
 function HomePage() {
-  const vehiclesByCategory = useFetchVehicleByCategory()
+  const [vehiclesByCategory, isLoading] = useFetchVehicleByCategory()
   const allVehicles = getAllVehicles()
   const randVehicles = useRandomVehicles(allVehicles)
   const categories = useSelector((state) => state.vehicles.categories)
   const { categoryId } = useParams()
+
+  if (isLoading) return <LoadingScreen />
 
   return (
     <>

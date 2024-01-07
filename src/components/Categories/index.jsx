@@ -11,7 +11,7 @@ function Categories({ isOpened = false }) {
         <ul>
           {dummyCategories.map(category => {
             const key = crypto.randomUUID()
-            return <CategoryItem category={category} />
+            return <CategoryItem key={key} category={category} />
           })}
         </ul>
         <IoIosArrowForward />

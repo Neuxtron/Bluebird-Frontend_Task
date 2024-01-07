@@ -1,8 +1,14 @@
+@use "../../assets/dimens" as dimens;
+@use "../../assets/colors" as colors;
+
 .header {
+  position: sticky;
   top: 0;
-  height: 72px;
+  height: dimens.$headerHeight;
   padding: 0 20px;
   align-items: center;
+  background-color: colors.$primary;
+  z-index: 1;
 
   img {
     height: 100%;
@@ -26,7 +32,7 @@
 .navItem {
   height: 100%;
 
-  a {
+  & > * {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -34,9 +40,10 @@
     font-size: 1.3rem;
     height: 100%;
     padding: 0 30px;
+    cursor: pointer;
     
     &:hover {
-      background-color: #00000022;
+      background-color: #FFFFFF17;
     }
   }
 }

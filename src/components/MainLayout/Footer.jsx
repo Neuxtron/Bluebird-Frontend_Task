@@ -26,7 +26,7 @@ function Footer() {
         </ul>
       </div>
       <div>
-        <h1>Pages</h1>
+        <h1>Navigation</h1>
         <ul>
           <LinkItem text="Wishlist" to="#" />
           <LinkItem text="My Bookings" to="#" />

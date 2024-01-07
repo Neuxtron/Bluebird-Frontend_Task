@@ -1,5 +1,5 @@
 Requirements:
-  ☐ Use redux
+  ✔ Use redux @done(24-01-07 19:43)
   Use the following hooks:
     ✔ useState @done(24-01-06 21:43)
     ✔ useEffect @done(24-01-06 21:43)
@@ -50,6 +50,7 @@ Functionality:
 
 
 Additional:
-  ☐ Animation @high
+  ✔ Animation @high @done(24-01-07 19:45)
   ☐ Responsive design @low
-  ☐ Loading page
+  ☐ Loading page @low
+  ☐ Change logo

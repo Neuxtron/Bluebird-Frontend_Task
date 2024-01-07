@@ -10,6 +10,8 @@ function DetailsPage() {
   const { id } = useParams()
   const vehicle = useGetVehicle(id)
 
+  useEffect(() => scrollTo(0, 0), [])
+
   // OPTIMIZE: return loading animation
   if (!vehicle) return null
 

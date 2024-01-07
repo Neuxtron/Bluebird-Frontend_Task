@@ -17,7 +17,6 @@ function HomePage() {
 
   return (
     <>
-      {/* OPTIMIZE: random generated twice */}
       {categoryId ? null : <div className={styles.vehicleList}>
         <h1>Experience the ride</h1>
         <p>from different seats.</p>

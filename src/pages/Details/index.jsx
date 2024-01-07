@@ -28,6 +28,12 @@ function DetailsPage() {
     dispatch(bookVehicle(vehicle.vehicle))
   }
 
+  const onShare = () => {
+    // TODO: notify user
+    const currLocation = location.href
+    navigator.clipboard.writeText(currLocation)
+  }
+
   // OPTIMIZE: return loading animation
   if (!vehicle) return null
 
@@ -40,8 +46,7 @@ function DetailsPage() {
       />
       <div className={styles.actions + " d-flex"}>
         <div>
-          {/* TODO: copy link to clipboard */}
-          <button>
+          <button onClick={onShare}>
             <IoMdShare />
             Share
           </button>

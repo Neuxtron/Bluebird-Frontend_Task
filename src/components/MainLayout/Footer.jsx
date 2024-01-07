@@ -1,6 +1,7 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 import styles from "./styles.module.scss"
 import { dummyCategories } from "../../data/dummy_data"
+import { Link } from "react-router-dom"
 
 function Footer() {
   return (
@@ -28,8 +29,8 @@ function Footer() {
       <div>
         <h1>Navigation</h1>
         <ul>
-          <LinkItem text="Wishlist" to="#" />
-          <LinkItem text="My Bookings" to="#" />
+          <LinkItem text="Wishlist" to="/wishlist" />
+          <LinkItem text="My Bookings" to="my-bookings" />
         </ul>
       </div>
     </div>
@@ -39,7 +40,7 @@ function Footer() {
 function LinkItem({ text, to }) {
   return (
     <li>
-      <a href={to}>{text}</a>
+      <Link to={to}>{text}</Link>
     </li>
   )
 }

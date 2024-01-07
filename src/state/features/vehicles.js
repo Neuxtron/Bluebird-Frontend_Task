@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit"
 
 export const vehiclesSlice = createSlice({
   name: "vehicles",
@@ -9,8 +9,14 @@ export const vehiclesSlice = createSlice({
     likedIds: [],
   },
   reducers: {
-    setLikeVehicle: (state, action) => {
-      // TODO: add vehicle id to likedIds
+    toggleLikeVehicle: (state, action) => {
+      if (state.likedIds.includes(action.payload)) {
+        state.likedIds = state.likedIds.filter(id => {
+          return id !== action.payload
+        })
+      } else {
+        state.likedIds.push(action.payload)
+      }
     },
     bookVehicle: (state, action) => {
       // TODO: add vehicle id to bookedIds
@@ -21,8 +27,9 @@ export const vehiclesSlice = createSlice({
     setCategories: (state, action) => {
       state.categories = action.payload
     },
-  }
+  },
 })
 
-export const { setVehicles, setCategories, setLikeVehicle, bookVehicle } = vehiclesSlice.actions
+export const { setVehicles, setCategories, toggleLikeVehicle, bookVehicle } =
+  vehiclesSlice.actions
 export default vehiclesSlice.reducer
